@@ -13,3 +13,30 @@ Notes on learning ASP.NET
     used `git -rm -r --cached on lib and obj directories. At a first
     glance, `git ls-tree --full-tree -r --name-only HEAD` seems to contain
     (mostly?) files that we care about for the project.
+ 5. After the hello world tutorial, the webpage suggests a tutorial on
+    Razor pages – huh, wonder what those are.
+ 6. Browsing the collection of tutorials at
+    dotnet.microsoft.com/learn/aspnet, I was interested in the ASP.NET
+    Security topic (I haven't done much with security on the web before),
+    so I checked that out.
+      * Cross-site scripting (XSS) attacks: trick your app into inserting
+        <script> into rendered page (that makes sense, would allow them to
+        run nearly anything on your server) or by inserting a `0n*` element
+        – which is astonishingly hard to google. To prevent XSS attacks,
+        sanitize any user input and never put untrusted data directly in
+        HTML. (HTML encoding, for elements or attributes). As much as
+        possible avoid putting untrusted data into JS, for example by
+        putting the js in HTML elements you retrieve at runtime. JS
+        encoding is a backup plan. Encoding takes place at output time,
+        so never encode values in a database (this feels counterintuitive).
+      * SQL injection attacks: trick your app into executing SQL command as
+        part of a standard query. To avoid, always pass user-provided
+        values using parameterization.
+      * Cross-site request forgery (CSRF/XSRF) attacks: can allow
+        exploitation of cookies to impersonate a user. TBH  I didn't
+        totally  follow this discussion – plan to come back and revisit
+        once I'm in the web dev mindset. :)
+      * Open redirect attacks: attacker can substitute a redirect URL and
+        send your user to a malicious site. To avoid, always check redirect
+        URLs for tampering, ensure that they are done locally or to a known
+        url, never based on user input.
