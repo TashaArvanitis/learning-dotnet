@@ -1,7 +1,15 @@
 Notes on learning ASP.NET
 -------------------------
 
-1. Installation: I ran the pkg to install it, then chown'd the relevant
-   files (/usr/local/share/dotnet) and added that directory to my PATH. Not
-   clear to me why the installer didn't do that, but here we are!
-2. Getting it running! Using `dotnet run` worked right off the bat. Phew.
+ 1. Installation: I ran the pkg to install it, then chown'd the relevant
+    files (/usr/local/share/dotnet) and added that directory to my PATH. Not
+    clear to me why the installer didn't do that, but here we are!
+ 2. Getting it running! Using `dotnet run` worked right off the bat. Phew.
+ 3. Changing Pages/Index.cshtml worked great. Next up: learning how that
+    date function call works.
+ 4. Once hello world worked, I noticed a ton of files had changed that I
+    originally had under version control. Oops! Went and found the
+    github-recommended .gitignore for visual studio, which helped a ton. Also
+    used `git -rm -r --cached on lib and obj directories. At a first
+    glance, `git ls-tree --full-tree -r --name-only HEAD` seems to contain
+    (mostly?) files that we care about for the project.
