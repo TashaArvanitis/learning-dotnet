@@ -1,0 +1,7 @@
+Notes on learning ASP.NET
+-------------------------
+
+1. Installation: I ran the pkg to install it, then chown'd the relevant
+   files (/usr/local/share/dotnet) and added that directory to my PATH. Not
+   clear to me why the installer didn't do that, but here we are!
+2. Getting it running! Using `dotnet run` worked right off the bat. Phew.
