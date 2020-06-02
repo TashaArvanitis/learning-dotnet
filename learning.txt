@@ -43,3 +43,12 @@ Notes on learning ASP.NET
  7. Since David and Elissa recommended starting with a console app, I
     happened to find an introductory C# tutorial based on that. The goal:
     get to know syntax, operators, common functions, and control flow.
+ 8. I might have gotten a little carried away on the console app – now it's
+    a (very) basic "disaster stabilization" game based on the FEMA Community
+    Lifelines.
+ 9. Tests....ugh. I'm really struggling to get tests working. I tried
+    adding a new project to the solution, but it wasn't able to find
+    VisualStudio in the namespace Microsoft, and suddenly everything wasn't
+    building, despite the fact I hadn't changed the underlying code. I've
+    deleted a bunch of stuff I created to get  it back to building, and
+    I'll pull this repo elsewhere to see if it works there.
