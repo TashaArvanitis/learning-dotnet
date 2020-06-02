@@ -40,3 +40,6 @@ Notes on learning ASP.NET
         send your user to a malicious site. To avoid, always check redirect
         URLs for tampering, ensure that they are done locally or to a known
         url, never based on user input.
+ 7. Since David and Elissa recommended starting with a console app, I
+    happened to find an introductory C# tutorial based on that. The goal:
+    get to know syntax, operators, common functions, and control flow.
